@@ -16,9 +16,6 @@ export default {
     </header>
 </template>
 
-<style scoped>
-    header {
-        padding: 20px;
-        background-color: aquamarine;
-    }
+<style lang="scss" scoped>
+@use "../assets/scss/header" as *;
 </style>

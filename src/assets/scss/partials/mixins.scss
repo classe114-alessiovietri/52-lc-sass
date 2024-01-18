@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+@mixin debug-rules {
+    border: 5px dashed red;
+    background-color: aquamarine;
+    color: purple;
+    font-weight: bold;
+}
+
+@mixin default-spaces {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+}

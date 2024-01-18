@@ -1,0 +1,59 @@
+@use "partials/reset" as *;
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
+
+// ul
+ul {
+    @include debug-rules;
+
+    // ul > li
+    > li {
+        background-color: aqua;
+        @include default-spaces;
+    
+        // ul > li:nth-child(2)
+        &:nth-child(2n) {
+            background-color: lightcoral;
+            padding: 10px;
+
+            // ul > li:nth-child(2).special-li
+            &.special-li {
+                background-color: goldenrod;
+                padding: 30px;
+            }
+
+            // ul > li:nth-child(2):hover
+            &:hover {
+                cursor: pointer;
+                border: 3px dashed red;
+
+                // ul > li:nth-child(2):hover:active
+                &:active {
+                    cursor: copy;
+                    border: 10px dashed yellow;
+                }
+            }
+        }
+    }
+}
+
+a {
+    color: red;
+}
+
+#main {
+    font-size: $text-size;
+    color: $text-color;
+    border: $text-size solid $text-color;
+
+    > a {
+        color: $link-color;
+        @include default-spaces;
+
+        button {
+            padding: 20px;
+            
+            @include debug-rules;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@use "partials/reset" as *;
+@use "partials/variables" as *;
+
+header {
+    padding: $text-size;
+    background-color: aquamarine;
+}
